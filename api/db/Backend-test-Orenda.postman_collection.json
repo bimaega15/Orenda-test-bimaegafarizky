@@ -1,0 +1,1529 @@
+{
+	"info": {
+		"_postman_id": "e73ac3c8-4344-490f-85dd-6220402ea20f",
+		"name": "Backend-test-Orenda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8223691"
+	},
+	"item": [
+		{
+			"name": "Master",
+			"item": [
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "get customer",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{url}}/customer",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get customer",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/customer",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"customer"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "561"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"231-2tMwCBJE5rjVIlpYQ84S6DRR4b8\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 04:32:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully fetched data\",\n    \"result\": [\n        {\n            \"id\": 2,\n            \"name\": \"Mas John\",\n            \"phone\": \"0987389287                    \",\n            \"email\": \"masjon45@gmail.com\",\n            \"address\": \"medan\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"John LBF\",\n            \"phone\": \"098729837868                  \",\n            \"email\": \"jonlbf15@gmail.com\",\n            \"address\": \"jakarta\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Bima Ega Farizky\",\n            \"phone\": \"082277506232                  \",\n            \"email\": \"bimaega55@gmail.com\",\n            \"address\": \"Jl. Diponegoro kisaran\"\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Bima Ega\",\n            \"phone\": \"082277506232                  \",\n            \"email\": \"bimaega15@gmail.com\",\n            \"address\": \"Jl. Diponegoro\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "get customer by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{url}}/customer/1/getById",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"1",
+										"getById"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get customer by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/customer/1/getById",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"customer",
+												"1",
+												"getById"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "186"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ba-vTwl3M9HLnnuIaVyUWFNfAQRyEc\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 04:32:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully fetched data\",\n    \"result\": {\n        \"id\": 1,\n        \"name\": \"Bima Ega\",\n        \"phone\": \"082277506232                  \",\n        \"email\": \"bimaega15@gmail.com\",\n        \"address\": \"Jl. Diponegoro\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "create customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Bima Ega Farizky",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "082277506232",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "bimaega75@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Jl. Diponegoro kisaran",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create customer",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Bima Ega Orenda",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "082277506232",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "bimaega75@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "Jl. Diponegoro kisaran Medan",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/customer",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"customer"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "181"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"b5-c+7pYmnqppSuTgNlAUDn4q+/HBE\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 04:33:19 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully insert data\",\n    \"result\": {\n        \"name\": \"Bima Ega Orenda\",\n        \"phone\": \"082277506232\",\n        \"email\": \"bimaega75@gmail.com\",\n        \"address\": \"Jl. Diponegoro kisaran Medan\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update customer",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Bima Ega",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "082277506232",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "bimaega95@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Jl. Diponegoro",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/6/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"6",
+										"update"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update customer",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Bima Ega",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "082277506232",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "bimaega65@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "Jl. Diponegoro",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/customer/4/update",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"customer",
+												"4",
+												"update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "160"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"a0-qY3yfs9G8kfOvYeK2pr/2UPCxbQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 04:33:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully update data\",\n    \"result\": {\n        \"name\": \"Bima Ega\",\n        \"phone\": \"082277506232\",\n        \"email\": \"bimaega65@gmail.com\",\n        \"address\": \"Jl. Diponegoro\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete customer",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/customer/4/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"4",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete customer",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/customer/4/delete",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"customer",
+												"4",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-4C1zQsA3QoN/7Gdfjy/yM5GeRz8\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 04:34:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully deleted data\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "get product",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{url}}/product",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get product",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{url}}/product",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "167"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"a7-uASodrG/nQjOGiI/ulIvbO5S7dU\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 08:02:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully fetched data\",\n    \"result\": [\n        {\n            \"id\": 2,\n            \"name\": \"Dress\",\n            \"unit\": \"pcs\",\n            \"price\": 250000\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Shoes\",\n            \"unit\": \"pcs\",\n            \"price\": 100000\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "get product by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/product/1/getById",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"1",
+										"getById"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get product by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/product/1/getById",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"product",
+												"1",
+												"getById"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "113"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"71-THR13lTEK54EZzaqWDe3d2P3QNg\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 08:04:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully fetched data\",\n    \"result\": {\n        \"id\": 1,\n        \"name\": \"Shoes\",\n        \"unit\": \"pcs\",\n        \"price\": 100000\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "create product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Long-sleeved shirt",
+											"type": "text"
+										},
+										{
+											"key": "unit",
+											"value": "pcs",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "300000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/product",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create product",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Long-sleeved shirt",
+													"type": "text"
+												},
+												{
+													"key": "unit",
+													"value": "pcs",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "300000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/product",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "120"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"78-TflEQmktWj4X4mJN14xqIXh+Vak\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 07:56:01 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully insert data\",\n    \"result\": {\n        \"name\": \"Long-sleeved shirt\",\n        \"unit\": \"pcs\",\n        \"price\": \"300000\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update product",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Shoes",
+											"type": "text"
+										},
+										{
+											"key": "unit",
+											"value": "pcs",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/product/1/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"1",
+										"update"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update product",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Shoes",
+													"type": "text"
+												},
+												{
+													"key": "unit",
+													"value": "pcs",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "100000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/product/3/delete",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"product",
+												"3",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "107"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"6b-eFPxxjcc0NjU6J3l1fudt+z+hXY\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 08:00:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully update data\",\n    \"result\": {\n        \"name\": \"Shoes\",\n        \"unit\": \"pcs\",\n        \"price\": \"100000\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/product/3/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"3",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete product",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/product/3/delete",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"product",
+												"3",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-4C1zQsA3QoN/7Gdfjy/yM5GeRz8\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 08:01:48 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully deleted data\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "get order",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/order",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get order",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/order",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"order"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1766"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"6e6-0MYrstInLrY6Wf0HN7Qii4476wk\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 08:53:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully fetched data\",\n    \"result\": [\n        {\n            \"datetransaction\": \"2023-03-12 15:38:06\",\n            \"id\": 19,\n            \"noinvoice\": \"INV/2389/23892\",\n            \"total\": 1000000,\n            \"discount\": 5000,\n            \"typediscount\": \"nominal\",\n            \"customer_id\": 1,\n            \"finaltotal\": 95000,\n            \"orderdetails\": [\n                {\n                    \"id\": 6,\n                    \"order_id\": 19,\n                    \"product_id\": 1,\n                    \"qty\": 3,\n                    \"discount\": null,\n                    \"typediscount\": null,\n                    \"order\": {\n                        \"datetransaction\": \"2023-03-12 15:38:06\",\n                        \"id\": 19,\n                        \"noinvoice\": \"INV/2389/23892\",\n                        \"total\": 1000000,\n                        \"discount\": 5000,\n                        \"typediscount\": \"nominal\",\n                        \"customer_id\": 1,\n                        \"finaltotal\": 95000\n                    },\n                    \"product\": {\n                        \"id\": 1,\n                        \"name\": \"Shoes\",\n                        \"unit\": \"pcs\",\n                        \"price\": 100000\n                    }\n                },\n                {\n                    \"id\": 7,\n                    \"order_id\": 19,\n                    \"product_id\": 2,\n                    \"qty\": 5,\n                    \"discount\": 5000,\n                    \"typediscount\": \"nominal\",\n                    \"order\": {\n                        \"datetransaction\": \"2023-03-12 15:38:06\",\n                        \"id\": 19,\n                        \"noinvoice\": \"INV/2389/23892\",\n                        \"total\": 1000000,\n                        \"discount\": 5000,\n                        \"typediscount\": \"nominal\",\n                        \"customer_id\": 1,\n                        \"finaltotal\": 95000\n                    },\n                    \"product\": {\n                        \"id\": 2,\n                        \"name\": \"Dress\",\n                        \"unit\": \"pcs\",\n                        \"price\": 250000\n                    }\n                }\n            ]\n        },\n        {\n            \"datetransaction\": \"2023-03-12 15:52:56\",\n            \"id\": 21,\n            \"noinvoice\": \"INV/325235/235234\",\n            \"total\": 2000000,\n            \"discount\": 500000,\n            \"typediscount\": \"nominal\",\n            \"customer_id\": 1,\n            \"finaltotal\": 1500000,\n            \"orderdetails\": [\n                {\n                    \"id\": 18,\n                    \"order_id\": 21,\n                    \"product_id\": 1,\n                    \"qty\": 1,\n                    \"discount\": 5,\n                    \"typediscount\": \"persen\",\n                    \"order\": {\n                        \"datetransaction\": \"2023-03-12 15:52:56\",\n                        \"id\": 21,\n                        \"noinvoice\": \"INV/325235/235234\",\n                        \"total\": 2000000,\n                        \"discount\": 500000,\n                        \"typediscount\": \"nominal\",\n                        \"customer_id\": 1,\n                        \"finaltotal\": 1500000\n                    },\n                    \"product\": {\n                        \"id\": 1,\n                        \"name\": \"Shoes\",\n                        \"unit\": \"pcs\",\n                        \"price\": 100000\n                    }\n                },\n                {\n                    \"id\": 19,\n                    \"order_id\": 21,\n                    \"product_id\": 2,\n                    \"qty\": 1,\n                    \"discount\": 10000,\n                    \"typediscount\": \"nominal\",\n                    \"order\": {\n                        \"datetransaction\": \"2023-03-12 15:52:56\",\n                        \"id\": 21,\n                        \"noinvoice\": \"INV/325235/235234\",\n                        \"total\": 2000000,\n                        \"discount\": 500000,\n                        \"typediscount\": \"nominal\",\n                        \"customer_id\": 1,\n                        \"finaltotal\": 1500000\n                    },\n                    \"product\": {\n                        \"id\": 2,\n                        \"name\": \"Dress\",\n                        \"unit\": \"pcs\",\n                        \"price\": 250000\n                    }\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "get order by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/order/21/getById",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"21",
+										"getById"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get order by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/order/21/getById",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"order",
+												"21",
+												"getById"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "925"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"39d-BvLdGl4UWgGNJL10j9i5D3Hk+3o\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 08:57:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully fetched data\",\n    \"result\": {\n        \"datetransaction\": \"2023-03-12 15:52:56\",\n        \"id\": 21,\n        \"noinvoice\": \"INV/325235/235234\",\n        \"total\": 2000000,\n        \"discount\": 500000,\n        \"typediscount\": \"nominal\",\n        \"customer_id\": 1,\n        \"finaltotal\": 1500000,\n        \"orderdetails\": [\n            {\n                \"id\": 18,\n                \"order_id\": 21,\n                \"product_id\": 1,\n                \"qty\": 1,\n                \"discount\": 5,\n                \"typediscount\": \"persen\",\n                \"order\": {\n                    \"datetransaction\": \"2023-03-12 15:52:56\",\n                    \"id\": 21,\n                    \"noinvoice\": \"INV/325235/235234\",\n                    \"total\": 2000000,\n                    \"discount\": 500000,\n                    \"typediscount\": \"nominal\",\n                    \"customer_id\": 1,\n                    \"finaltotal\": 1500000\n                },\n                \"product\": {\n                    \"id\": 1,\n                    \"name\": \"Shoes\",\n                    \"unit\": \"pcs\",\n                    \"price\": 100000\n                }\n            },\n            {\n                \"id\": 19,\n                \"order_id\": 21,\n                \"product_id\": 2,\n                \"qty\": 1,\n                \"discount\": 10000,\n                \"typediscount\": \"nominal\",\n                \"order\": {\n                    \"datetransaction\": \"2023-03-12 15:52:56\",\n                    \"id\": 21,\n                    \"noinvoice\": \"INV/325235/235234\",\n                    \"total\": 2000000,\n                    \"discount\": 500000,\n                    \"typediscount\": \"nominal\",\n                    \"customer_id\": 1,\n                    \"finaltotal\": 1500000\n                },\n                \"product\": {\n                    \"id\": 2,\n                    \"name\": \"Dress\",\n                    \"unit\": \"pcs\",\n                    \"price\": 250000\n                }\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "create order",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "noinvoice",
+											"value": "INV/325235/235234",
+											"type": "text"
+										},
+										{
+											"key": "total",
+											"value": "2000000",
+											"type": "text"
+										},
+										{
+											"key": "discount",
+											"value": "500000",
+											"type": "text"
+										},
+										{
+											"key": "typediscount",
+											"value": "nominal",
+											"type": "text"
+										},
+										{
+											"key": "customer_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "product_id",
+											"value": "1,2",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": "1,1",
+											"type": "text"
+										},
+										{
+											"key": "discountDetail",
+											"value": "5,10000",
+											"type": "text"
+										},
+										{
+											"key": "typeDiscountDetail",
+											"value": "persen,nominal",
+											"type": "text"
+										},
+										{
+											"key": "finaltotal",
+											"value": "1500000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/order",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create order",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "noinvoice",
+													"value": "INV/325235/235234",
+													"type": "text"
+												},
+												{
+													"key": "total",
+													"value": "1500000",
+													"type": "text"
+												},
+												{
+													"key": "discount",
+													"value": "10000",
+													"type": "text"
+												},
+												{
+													"key": "typediscount",
+													"value": "nominal",
+													"type": "text"
+												},
+												{
+													"key": "customer_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "product_id",
+													"value": "1,2",
+													"type": "text"
+												},
+												{
+													"key": "qty",
+													"value": "1,1",
+													"type": "text"
+												},
+												{
+													"key": "discountDetail",
+													"value": ",10000",
+													"type": "text"
+												},
+												{
+													"key": "typeDiscountDetail",
+													"value": ",nominal",
+													"type": "text"
+												},
+												{
+													"key": "finaltotal",
+													"value": "1400000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/order",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"order"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "286"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"11e-yDfAyY6zbuw+m2QX9PVAVxo+EJY\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 08:39:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully insert data\",\n    \"result\": {\n        \"noinvoice\": \"INV/325235/235234\",\n        \"total\": \"1500000\",\n        \"discount\": \"10000\",\n        \"typediscount\": \"nominal\",\n        \"customer_id\": \"1\",\n        \"product_id\": \"1,2\",\n        \"qty\": \"1,1\",\n        \"discountDetail\": \",10000\",\n        \"typeDiscountDetail\": \",nominal\",\n        \"finaltotal\": \"1400000\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update order",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "noinvoice",
+											"value": "INV/325235/235234",
+											"type": "text"
+										},
+										{
+											"key": "total",
+											"value": "2000000",
+											"type": "text"
+										},
+										{
+											"key": "discount",
+											"value": "500000",
+											"type": "text"
+										},
+										{
+											"key": "typediscount",
+											"value": "nominal",
+											"type": "text"
+										},
+										{
+											"key": "customer_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "product_id",
+											"value": "1,2",
+											"type": "text"
+										},
+										{
+											"key": "qty",
+											"value": "1,1",
+											"type": "text"
+										},
+										{
+											"key": "discountDetail",
+											"value": ",500000",
+											"type": "text"
+										},
+										{
+											"key": "typeDiscountDetail",
+											"value": ",nominal",
+											"type": "text"
+										},
+										{
+											"key": "finaltotal",
+											"value": "1500000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/order/20/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"20",
+										"update"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create order",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "noinvoice",
+													"value": "INV/325235/235234",
+													"type": "text"
+												},
+												{
+													"key": "total",
+													"value": "1500000",
+													"type": "text"
+												},
+												{
+													"key": "discount",
+													"value": "10000",
+													"type": "text"
+												},
+												{
+													"key": "typediscount",
+													"value": "nominal",
+													"type": "text"
+												},
+												{
+													"key": "customer_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "product_id",
+													"value": "1,2",
+													"type": "text"
+												},
+												{
+													"key": "qty",
+													"value": "1,1",
+													"type": "text"
+												},
+												{
+													"key": "discountDetail",
+													"value": ",10000",
+													"type": "text"
+												},
+												{
+													"key": "typeDiscountDetail",
+													"value": ",nominal",
+													"type": "text"
+												},
+												{
+													"key": "finaltotal",
+													"value": "1400000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/order",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"order"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "286"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"11e-yDfAyY6zbuw+m2QX9PVAVxo+EJY\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 08:39:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully insert data\",\n    \"result\": {\n        \"noinvoice\": \"INV/325235/235234\",\n        \"total\": \"1500000\",\n        \"discount\": \"10000\",\n        \"typediscount\": \"nominal\",\n        \"customer_id\": \"1\",\n        \"product_id\": \"1,2\",\n        \"qty\": \"1,1\",\n        \"discountDetail\": \",10000\",\n        \"typeDiscountDetail\": \",nominal\",\n        \"finaltotal\": \"1400000\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete order",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/order/20/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"20",
+										"delete"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete order",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/order/20/delete",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"order",
+												"20",
+												"delete"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "52"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34-4C1zQsA3QoN/7Gdfjy/yM5GeRz8\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 12 Mar 2023 08:51:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Successfully deleted data\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
